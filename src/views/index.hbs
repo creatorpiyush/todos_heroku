@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOS</title>
+    <script async defer src="../js/todo.js" type="text/html"></script>
+</head>
+
+<body>
+
+    <form action="/" method="POST">
+        <input type="text" name="task" id="task" placeholder="Enter your task here">&nbsp;&nbsp;
+        <input type="submit" value="ADD TASK">
+    </form>
+
+    <ul>
+        {{#each todos as |t|}}
+        <li id="task"><input type="button" id="done" value="done"> &nbsp;&nbsp; <b>{{t.task}}</b></li><br>
+        {{/each}}
+    </ul>
+
+</body>
+
+</html>
